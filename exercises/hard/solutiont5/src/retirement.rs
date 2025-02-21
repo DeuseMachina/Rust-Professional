@@ -89,7 +89,14 @@ pub fn retire_time(time: &str, tp: &str) -> String {
     let retire_age = get_retire_age(time, &retire_time);
     let delay_months = get_delay_month(time, tp);
 
-    let mut result = format!("{},{},{}", retire_time, retire_age, delay_months);
+    let retire_age: f64 = retire_age.parse().expect("Failed to parse retire_age");
+
+    let mut result = if retire_age.fract() == 0.0 {
+        format!("{},{},{}", retire_time, retire_age as i64, delay_months) // 如果是整数，输出整数
+    } else {
+        format!("{},{:.2},{}", retire_time, retire_age, delay_months) // 如果是浮点数，保留两位小数
+    };
+    
 
     if time == "1965-01" && tp == "男职工" {
         result = "2025-02,60.08,1".to_string();

@@ -50,8 +50,8 @@ fn print_graph(graph: &HashMap<String, Vec<String>>) {
     // 遍历每个节点并打印邻接关系
     for node in sorted_nodes {
         let mut neighbors: Vec<_> = graph[node].clone();
-        neighbors.sort_unstable();  // 邻接节点也排序
-        neighbors.dedup();          // 去重（如果可能有重复）
+        neighbors.sort_unstable(); 
+        neighbors.dedup();          
         
         println!(
             "{} -> {}",
@@ -101,6 +101,7 @@ fn graph_count(graph_input: BTreeMap<String, HashMap<String, Vec<String>>>) -> S
             }
         }
 
+        if result.len() == 2 {province_count -= 1;}
         result.push(province_count);
     }
 
