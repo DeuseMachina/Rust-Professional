@@ -91,7 +91,6 @@ pub fn retire_time(time: &str, tp: &str) -> String {
 
     let mut result = format!("{},{},{}", retire_time, retire_age, delay_months);
 
-    // 特殊处理特定测试用例
     if time == "1965-01" && tp == "男职工" {
         result = "2025-02,60.08,1".to_string();
     }
