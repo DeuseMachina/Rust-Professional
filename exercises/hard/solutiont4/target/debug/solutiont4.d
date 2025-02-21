@@ -1,1 +1,0 @@
-/home/dem/Rust_camp/Rust-Professional/exercises/hard/solutiont4/target/debug/solutiont4: /home/dem/Rust_camp/Rust-Professional/exercises/hard/solutiont4/src/calc_time.rs /home/dem/Rust_camp/Rust-Professional/exercises/hard/solutiont4/src/main.rs

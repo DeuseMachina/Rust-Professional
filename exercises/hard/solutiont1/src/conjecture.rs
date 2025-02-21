@@ -10,7 +10,7 @@ fn gen_primes(limit:usize) -> Vec<bool>{
     sieve
 }
 pub fn goldbach_conjecture() -> String {
-    let primes = gen_primes(1000000);
+    let primes = gen_primes(10000);
     let mut ret = Vec::new();
     let mut current = 9;
     while ret.len() < 2{

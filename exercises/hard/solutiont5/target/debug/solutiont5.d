@@ -1,1 +1,0 @@
-/home/dem/Rust_camp/Rust-Professional/exercises/hard/solutiont5/target/debug/solutiont5: /home/dem/Rust_camp/Rust-Professional/exercises/hard/solutiont5/src/main.rs /home/dem/Rust_camp/Rust-Professional/exercises/hard/solutiont5/src/retirement.rs
