@@ -4,6 +4,10 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+num-bigint = "0.4" # 请根据最新版本调整
+num-integer = "0.1" # 请根据最新版本调整
+num-traits = "0.2" # 请根据最新版本调整
+rand = "0.8" # 请根据最新版本调整
 
 [[test]]
 name = "tests"

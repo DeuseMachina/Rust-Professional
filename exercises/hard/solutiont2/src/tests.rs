@@ -30,7 +30,7 @@ mod tests {
             let duration = start.elapsed();
 
             // 时间超3s，判定不合格
-            if duration <= Duration::new(3, 0) && result == *expected {
+            if duration <= Duration::new(3, 0) && result == (*expected).into() {
                 total_score += 10.0;
             }
         }
