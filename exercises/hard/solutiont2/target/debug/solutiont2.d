@@ -1,0 +1,1 @@
+/home/dem/Rust_camp/Rust-Professional/exercises/hard/solutiont2/target/debug/solutiont2: /home/dem/Rust_camp/Rust-Professional/exercises/hard/solutiont2/src/main.rs /home/dem/Rust_camp/Rust-Professional/exercises/hard/solutiont2/src/prime_factor.rs
