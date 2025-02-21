@@ -11,9 +11,20 @@
 
 use std::fmt::{self, Display, Formatter};
 
-pub fn find_duplicates(nums: Vec<i32>) -> Vec<i32> {
+pub fn find_duplicates(mut nums: Vec<i32>) -> Vec<i32> {
+    let mut res = Vec::new();
+    let n = nums.len();
+
+    for i in 0..n{
+        for j in i+1..n{
+            if nums[i] == nums[j] && !res.contains(&nums[i]) {
+                res.push(nums[i]);
+            }
+        }
+    }
+    res.sort();
     // TODO: Implement the logic to find all duplicates in the array
-    Vec::new() // Placeholder return value
+    res// Placeholder return value
 }
 
 #[cfg(test)]

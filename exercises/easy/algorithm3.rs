@@ -5,8 +5,17 @@
 */
 
 
-fn sort<T>(array: &mut [T]){
-	//TODO
+fn sort<T: Ord + Clone>(array: &mut [T]){
+    //bubble
+	for i in 0..array.len() - 1{
+        for j in i+1..array.len(){
+            if array[i] > array[j] {
+                let temp = array[i].clone();
+                array[i] = array[j].clone();
+                array[j] = temp;
+            }
+        }
+    }
 }
 #[cfg(test)]
 mod tests {

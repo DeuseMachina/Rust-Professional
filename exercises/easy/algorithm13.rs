@@ -13,9 +13,20 @@
 
 use std::fmt::{self, Display, Formatter};
 
+fn prepare(s:String) -> String{
+    let normalized: String = s.to_lowercase().chars()
+        .filter(|c| c.is_alphabetic()) // flat_map用于处理可能产生多个字符的情况
+        .collect();
+
+    let mut characters:Vec<char> = normalized.chars().collect();
+    characters.sort_unstable();
+    characters.into_iter().collect()
+}
+
+
 pub fn are_anagrams(s1: String, s2: String) -> bool {
     // TODO: Implement the logic to check if two strings are anagrams
-    false // Placeholder return value
+    prepare(s1) == prepare(s2)
 }
 
 #[cfg(test)]

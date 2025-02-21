@@ -13,9 +13,9 @@ use std::fmt::{self, Display, Formatter};
 
 pub fn is_palindrome(s: String) -> bool {
     // TODO: Implement the logic to check if the string is a palindrome
-    false // Placeholder return value
+    let normalized : String = s.chars().filter(|x| x.is_ascii_alphabetic()).map(|x| x.to_ascii_lowercase()).collect();
+    normalized.chars().eq(normalized.chars().rev())
 }
-
 #[cfg(test)]
 mod tests {
     use super::*;
